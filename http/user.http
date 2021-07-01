@@ -1,0 +1,27 @@
+### POST Signup
+
+POST http://localhost:3000/user/signup
+Content-Type: application/json
+
+{
+  "email": "jongho.d1ev121331213@gmail.com",
+  "password": "Wldms0302!",
+  "name": "jongho"
+}
+
+### POST Login
+
+POST http://localhost:3000/user/login
+Content-Type: application/json
+
+{
+  "email": "jongjjang03@naver.com",
+  "password": "Wldms0302!"
+}
+
+> {% client.global.set("token", response.body.token) %}
+
+### GET get user
+
+GET http://localhost:3000/user
+Authorization: Bearer {{token}}
