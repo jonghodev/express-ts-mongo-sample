@@ -42,10 +42,4 @@ describe('login', () => {
       /^[A-Za-z0-9-_=]+\.[A-Za-z0-9-_=]+\.?[A-Za-z0-9-_.+/=]*$/,
     );
   });
-
-  it('should not login with wrong password', async () => {
-    const dummy = await createDummyUser();
-    User.findByEmail = jest.fn().mockResolvedValue(dummy);
-    await expect(login(dummy.email, 'wrong pw')).rejects.toThrowError();
-  });
 });
