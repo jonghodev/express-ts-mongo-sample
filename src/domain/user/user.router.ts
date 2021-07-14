@@ -2,7 +2,7 @@ import express from 'express';
 import { validate } from 'express-validation';
 import { verifyToken } from '@/middleware/authentication';
 import { loginValidation, signupValidation } from '@/domain/user/user.dto';
-import { getUserApi, loginApi, signupApi } from '@/domain/user/user.api';
+import { getUserApi, loginApi, signupApi } from '@/domain/user/user.validator';
 import { wrapAsync } from '@/utils/function';
 
 export const userRouter = express.Router();

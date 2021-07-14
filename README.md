@@ -43,9 +43,27 @@ JWS 기반 인증 시스템을 사용합니다.
 
 ## Test
 
-`Jest` 와 `supertest` 를 사용합니다. 테스트 시 DB 는 In memory DB 인 `mongodb-memory-server` 를 사용합니다. 
+`Jest` 와 `supertest` 를 사용합니다. 테스트 시 DB 는 In memory DB 인 `mongodb-memory-server` 를 사용합니다.
 
 ## HTTP Client
 
 Webstorm (Intellij) 의 HTTP Client 코드도 작성하고 있습니다.
 `http/` 하위 디렉토리에 `.http` 확장자의 파일로 작성했습니다. 사용법은 [링크](https://www.jetbrains.com/help/webstorm/http-client-in-product-code-editor.html#creating-http-request-files)를 참고해주세요.
+
+## Deploy
+
+### Install pm2, ts-node
+
+```bash
+npm i -g pm2 ts-node
+
+yarn global add pm2 ts-node
+```
+
+```bash
+# Deploy to dev
+pm2 start --env dev
+
+# Deploy to prod
+pm2 start --env prod
+```
