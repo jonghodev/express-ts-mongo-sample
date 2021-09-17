@@ -10,6 +10,7 @@ RUN yarn
 COPY . .
 
 ENV NODE_ENV="prod"
+ENV TS_NODE_TRANSPILE_ONLY="true"
 
 RUN yarn global add ts-node
 
